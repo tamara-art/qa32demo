@@ -85,4 +85,9 @@ public abstract class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.alertIsPresent());
     }
+
+    protected void waitForAlert(int timeOutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+        wait.until(ExpectedConditions.alertIsPresent());
+    }
 }
